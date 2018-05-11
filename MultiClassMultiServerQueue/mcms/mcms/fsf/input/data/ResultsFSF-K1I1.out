@@ -1,0 +1,21 @@
+GoodSL: 70484
+Objective Function = GoodSL/simDuration: 0.815787037037037
+NumPeriods: 14 NumMainPeriods: 12
+numGoodSL:7039   numServed:8613  numGoodSL/simDuration: 0.081469907
+Arrival rate of contacts of type k in all periods. 
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+0   0.099687500
+
+Avg. service time of contact k at group i
+0   0   0.852907791
+

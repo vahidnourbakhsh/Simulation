@@ -1,0 +1,4 @@
+# Number of servers at each center (integer number)
+param: k_j:= 
+0       2
+; 

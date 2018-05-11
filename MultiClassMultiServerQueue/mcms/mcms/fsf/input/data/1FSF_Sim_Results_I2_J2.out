@@ -1,0 +1,18 @@
+Num Periods: 14  Num Main Periods: 12  Each Period Length: 720.0  Num Replications: 5
+Total Simulation Duration (Num Main Period * Each Period Length * Num Replications): 43200.0
+
+EW(tot) (average over all periods and replications)
+0.152488
+
+EW(avg) (average over all periods and replications)
+0.152421
+
+Results (sum over all periods & average of replications): 
+  EW(tot): 6587.47149  Served: 43219  Blocked: 0  Arrived: 0
+
+Results (average of all periods & replications): 
+  EW(tot): 0.152488  Served: 1.00044  Blocked: 0  Arrived: 0
+
+SL(tot) (average across periods and replications):
+1.00044
+

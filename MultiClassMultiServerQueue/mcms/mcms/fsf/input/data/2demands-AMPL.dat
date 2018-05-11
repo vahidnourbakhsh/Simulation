@@ -1,0 +1,5 @@
+# Demand arriving at each job node 
+param: demand:= 
+0      1
+1	0.5
+; 

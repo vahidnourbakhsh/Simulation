@@ -207,12 +207,14 @@ public class Main {
 		RESULTSDECIMALPOINTS = 6; // number of decimals for saving results
 		
 		// File path: required for reading input data from drive
-		INPUTPATH = "/Users/VahidMac/Dropbox/Scholarly/Thesis/FSE/Vahid/FSE/Code_FSE/Queue Simulation/Java/Sim Paper/MyCallCenters/VahidTestProblem/FSF_policy/";
+		INPUTPATH = "/PATH/TO/THE/INPUT/FILES/"; // Example: "/USER/Documents/" (On Windows OS use "\\" and on Mac OS use "/" to separate folders)		
 		// Path for saving/printing the simulation results
 		RESULTSPATH = INPUTPATH;
 		int exNum = 1; // example number to be solved.
 		int I = 2; // number of contact types 
 		int K = 2; // number of agent groups
+		
+		// Inputs files
 		String agents = exNum + "agents-AMPL.dat"; // agent groups file name. It defines the number of agents in each group
 		String demands = exNum + "demands-AMPL.dat"; // demands(or arrivals) file name. It defines the arrival rate for each contact type
 		String routes = exNum + "routes-AMPL.dat"; // routes name. It defines eligible assignments of contact types to servers

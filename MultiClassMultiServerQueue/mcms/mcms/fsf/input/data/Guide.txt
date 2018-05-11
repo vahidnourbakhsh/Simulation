@@ -1,0 +1,13 @@
+We have two test problems:
+############ Problem 1 
+This test problem consists of one group (with two servers) and one job type. 
+The Erlang-C should give P[W>0] (Note AWT=0)
+EC(k=2,r=0.8)=0.2286
+P[W<=0]=1-0.2286 = 0.7714
+
+
+############ Problem 2
+This test problem consists of two groups (One group with two and the other with three servers) and two job types. (Note AWT=0)
+Group1:  Lambda_0=d_1 = 0.5 EC(k=3,r=2)=0.4444 P[W_0<=0]=0.5556
+Group2:  Lambda_1=d_0= 1 EC(k=2,r=1.5)=0.6429 P[W_1<=0]=0.3571
+SL_tot = Lambda_0 P[W_0<=0] + Lambda_1 P[W_1<=0] =  0.5 * 0.5556 + 0.3571 = 0.6349
