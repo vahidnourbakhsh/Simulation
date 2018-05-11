@@ -134,7 +134,6 @@ public class BuildLists {
 		return priority;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private static HashMap sortByValuesIncreasing(HashMap map) {
 		/**
 		 * This method sorts the HashMap according to its entries descending 
@@ -159,7 +158,6 @@ public class BuildLists {
 		return sortedHashMap;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private static HashMap sortByValuesDecreasing(HashMap map) {
 		/**
 		 * This method sorts the HashMap according to its entries descending 

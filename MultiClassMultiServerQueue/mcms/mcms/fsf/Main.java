@@ -20,16 +20,16 @@ import umontreal.iro.lecuyer.stat.Tally;
 import umontreal.iro.lecuyer.stat.matrix.MatrixOfTallies;
 
 public class Main {
-	static final int NUMREPS = 5; // Number of simulation replications 
-	static final int P = 12; // Number of periods in each replication 
-	static final double PERIODDURATION = 30*24; // Length of each period (I assume minutes but it could be any time unit, second, minute, etc.)
-	static final double SIMDURATION=NUMREPS*P*PERIODDURATION; // Total simulation length
-	static final double STARTINGTIME=0;  // PCE: main period starting time
-	static final int DETERMINISTICSERVICETIME=1; // 0: deterministic service time 1: Random (exponential) service time
-	static final double AWT=10; 	// Acceptable Queue waiting time
-	static final String INPUTPATH = "/Users/VahidMac/Dropbox/Scholarly/Thesis/FSE/Vahid/FSE/Code_FSE/Queue Simulation/Java/Sim Paper/MyCallCenters/VahidTestProblem/FSF_policy/"; // File path: required for reading input data from drive
-	static final String RESULTSPATH = INPUTPATH; // Path for saving/printing the simulation results
-	static final int RESULTSDECIMALPOINTS = 6; // number of decimals for saving results 
+	static int NUMREPS; // Number of simulation replications 
+	static int P; // Number of periods in each replication 
+	static double PERIODDURATION; // Length of each period (I assume minutes but it could be any time unit, second, minute, etc.)
+	static double SIMDURATION; // Total simulation length
+	static double STARTINGTIME;  // PCE: main period starting time
+	static int DETERMINISTICSERVICETIME; // 0: deterministic service time 1: Random (exponential) service time
+	static double AWT; 	// Acceptable Queue waiting time
+	static String INPUTPATH ; // File path: required for reading input data from drive
+	static String RESULTSPATH; // Path for saving/printing the simulation results
+	static int RESULTSDECIMALPOINTS; // number of decimals for saving results 
 	static PeriodChangeEvent PCE;  // Event marking the beginning of each simulation period
 	
 	// Statistical collectors
@@ -196,6 +196,20 @@ public class Main {
 		/**
 		 * Specify the example that should be simulated 
 		 **/
+		
+		NUMREPS = 5; // Number of simulation replications 
+		P = 12; // Number of periods in each replication (Notice: there is one warm-up and one wrap-up period, during which no statistics is collected)
+		PERIODDURATION = 30*24; // Length of each period (I assume minutes but it could be any time unit, second, minute, etc.)
+		SIMDURATION = NUMREPS * P * PERIODDURATION; // Total simulation length
+		STARTINGTIME = 0;  // PCE: main period starting time
+		DETERMINISTICSERVICETIME = 1; // 0: deterministic service time 1: Random (exponential) service time
+		AWT = 10; 	// Acceptable Queue waiting time
+		RESULTSDECIMALPOINTS = 6; // number of decimals for saving results
+		
+		// File path: required for reading input data from drive
+		INPUTPATH = "/Users/VahidMac/Dropbox/Scholarly/Thesis/FSE/Vahid/FSE/Code_FSE/Queue Simulation/Java/Sim Paper/MyCallCenters/VahidTestProblem/FSF_policy/";
+		// Path for saving/printing the simulation results
+		RESULTSPATH = INPUTPATH;
 		int exNum = 1; // example number to be solved.
 		int I = 2; // number of contact types 
 		int K = 2; // number of agent groups
