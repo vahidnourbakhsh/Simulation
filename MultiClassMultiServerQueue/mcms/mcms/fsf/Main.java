@@ -1,3 +1,24 @@
+/**
+ * <h1> Simulating Fastest-Server-First (FSF) Routing Policy for Multi-Class, Multi-Server Queueing Systems</h1>
+ *  <p>
+ *  This code simulates the Fastest-Server-First (a.k.a. Closest Driver) routing policy. 
+ * 	</p>
+ * 
+ *  <b> FSF Policy: </b> 
+ *  When a job (or call in call centers) of type $i$ arrives, a job-to-group priority list for that job type determines the order in which the groups are checked for a free server (or agent in call centers). 
+ *  The priority list is an ordered list of all groups that can serve job $i$, i.e., $j \in F_i$, sorted from smallest to largest service times $\tau_{ij}$. 
+ *  The policy is called FSF because the fastest server has the highest priority in the list. There is one queue for each job type $i \in I$. 
+ *  If job $i$ finds all groups in $F_i$ busy, it will stay in queue $i$, where it will be served in first-come, first-served order. 
+ *  Similarly, when a server in group $j$ becomes free, a group-to-job list for that server group determines the order by which the server picks the next job to serve. 
+ *  The group-to-job list for group $j$ is a list of all job types that server group $j$ can serve, i.e., $i \in F_j$, sorted in increasing order by $\tau_{ij}$'s. 
+ *  If all queues in the list are empty, then the server stays free.
+ *  
+ *  
+ * @author	Vahid Nourbakhsh 
+ * @version	13.0
+ * @since	2018-07-18
+ */
+
 package mcms.fsf;
 
 import java.io.File;
@@ -7,6 +28,10 @@ import java.util.List;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
+/*
+ * Import Contact Centers library. For more information refer to the library web page:
+ * http://simul.iro.umontreal.ca/contactcenters/index.html
+ */
 import umontreal.iro.lecuyer.contactcenters.PeriodChangeEvent;
 import umontreal.iro.lecuyer.contactcenters.contact.PiecewiseConstantPoissonArrivalProcess;
 import umontreal.iro.lecuyer.contactcenters.queue.StandardWaitingQueue;
@@ -207,9 +232,9 @@ public class Main {
 		RESULTSDECIMALPOINTS = 6; // number of decimals for saving results
 		
 		// File path: required for reading input data from drive
-		INPUTPATH = "/PATH/TO/THE/INPUT/FILES/"; // Example: "/USER/Documents/" (On Windows OS use "\\" and on Mac OS use "/" to separate folders)		
+		INPUTPATH = "./input_data/"; // Path to the input data. Example: "/USER/Documents/" (On Windows OS use "\\" and on Mac OS use "/" to separate path folders)		
 		// Path for saving/printing the simulation results
-		RESULTSPATH = INPUTPATH;
+		RESULTSPATH = "./simulation_output/";
 		int exNum = 1; // example number to be solved.
 		int I = 2; // number of contact types 
 		int K = 2; // number of agent groups
