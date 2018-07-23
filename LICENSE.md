@@ -1,9 +1,6 @@
-This script uses the "Contact Center" simulation library. 
-One should adhere to the license statement of the library developers:
-http://simul.iro.umontreal.ca/contactcenters/index.html
+Apache 2.0 License.
 
-"
-Copyright (c) 2003-2008 Eric Buist and Pierre L'Ecuyer, all rights reserved. 
-ContactCenters may be used freely for personal use, for research purposes or in a non-commercial environment. 
-Please contact the authors of the library for any commercial use.
-"
+This script uses the "ContactCenter" and "SSJ" Java packages.
+One should adhere to the license statement of the developers:
+- ContactCenters: http://simul.iro.umontreal.ca/contactcenters/index.html
+- Stochastic Simulation in Java (SSJ): http://simul.iro.umontreal.ca/ssj/indexe.html
