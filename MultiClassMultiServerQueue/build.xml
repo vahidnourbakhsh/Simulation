@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="MCMSFSFQueueSimulation">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Applications/Eclipse.app/Contents/Eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="CCJ.userclasspath">
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/Blas.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/colt.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/contactcenters.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/contactcenters-old.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/jxl.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/optimization.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/contactcenters/lib/ssj.jar"/>
+    </path>
+    <path id="SSJ.userclasspath">
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/Blas.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/colt.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/event-1.6.5.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/interpreter-1.6.8.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/jcommon-1.0.13.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/jfreechart-1.0.10.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/language-1.6.7.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/logger-1.6.4.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/optimization.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/ssj.jar"/>
+        <pathelement location="../../../Documents/FSE/Queue Simulation/ssj/lib/tcode.jar"/>
+    </path>
+    <path id="MCMSFSFQueueSimulation.classpath">
+        <pathelement location="bin"/>
+        <path refid="CCJ.userclasspath"/>
+        <path refid="SSJ.userclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="mcms">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="mcms"/>
+            <classpath refid="MCMSFSFQueueSimulation.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="RunFile">
+        <java classname="java.mcms.fsf.Main" failonerror="true" fork="yes">
+            <classpath refid="MCMSFSFQueueSimulation.classpath"/>
+        </java>
+    </target>
+    <target name="InputSrvTime">
+        <java classname="java.mcms.fsf.InputSrvTime" failonerror="true" fork="yes">
+            <classpath refid="MCMSFSFQueueSimulation.classpath"/>
+        </java>
+    </target>
+    <target name="FSFModel (2)">
+        <java classname="java.mcms.fsf.FSFModel" failonerror="true" fork="yes">
+            <classpath refid="MCMSFSFQueueSimulation.classpath"/>
+        </java>
+    </target>
+    <target name="Main (2)">
+        <java classname="mcms.main.Main" failonerror="true" fork="yes">
+            <classpath refid="MCMSFSFQueueSimulation.classpath"/>
+        </java>
+    </target>
+</project>
