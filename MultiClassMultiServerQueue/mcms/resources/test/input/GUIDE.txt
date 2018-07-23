@@ -1,0 +1,73 @@
+Each instance has three files:
+	- Agents: It includes the number of agents in each group i
+	- Demands: It includes the demand/arrival rate of each contact type k
+	- Routes: It includes the service time. The time it takes for an agent in group i to serve a contact of type k
+
+Naming Convention:
+	Each file starts with an example number, e.g.:
+		- 1agents.dat
+		- 1demands.dat
+		- 1routes.dat
+
+For formatting data read below or refer to the instructions in each of the input files:
+
+In each input data file, lines that start with hash tag sign # are treated as comments. 
+The data loader would ignore all comment lines including the header line.
+The data is presented in lines. In each line the last column is the parameter value. The first columns are indices, that is, k for contact and i for agent group.
+Start the indices from zero and keep the order, smallest to largest.
+
+Agents File Data Format (Line 9, ...):
+# i		num_agents
+  0		2
+  1		4
+  2		1
+  3		2
+
+Demands File Data Format (Line 9, ...):
+# k		arrival_rate
+  0		4
+  1		8
+  2		2
+  
+Routes File Data Format (Line 9, ...):
+# k		i		service_time
+  0		0		2
+  0		1		1.5
+  0		2		1.7
+  1		1		3
+  1		2		4
+  2		0		10
+  2		1		2
+Note that if a routing/assignment is not feasible, simply do not include it in the routes file. For example, in the above example, group 0 does not serve contact type 1.
+
+##### TEST PROBLEMS #####
+We have two test problems:
+## Problem 1 ## 
+This test problem consists of one group (with two agent) and one contact type.
+# EXPECTED OUTPUT: #
+Example number: 1
+	 Number of contact types: 1
+ 	 Number of agent groups: 1
+ 	 Acceptable Waiting Time: 10.0
+
+Simulation setting: 
+ 	 Number Periods: 14
+ 	 Nummer Main Periods (excluding warm-up and wrap-up periods): 12
+ 	 Each Period's Length: 86400.0
+ 	 Number Replications: 10
+	 Total Net Simulation Duration (Num Main Periods * Each Period's Length * Num Replications): 86400.0
+
+Simulation results (average over replications):
+	 Total number of contacts arrived at the system: 8613
+	 Total number of contacts served: 8613
+	 Total number of contacts served within the acceptable waiting time of 10.0: 8613
+	 Average number of contacts arrived at the system per unit time: 0.099687
+	 Average number of contacts served per unit time: 0.099687
+	 Average number of contacts served within the acceptable waiting time of 10.0 per unit time: 0.099687
+	 EW(avg): Expected queue waiting time of a random contact arrived at the system: 0.158116
+	 SL(avg): Average number of contacts that were served within the acceptable waiting time (defined per unit time): 0.099687
+
+## Problem 2 ##
+This test problem consists of two groups (one group with two and the other with three agents). There are two job type.
+# EXPECTED OUTPUT: #
+

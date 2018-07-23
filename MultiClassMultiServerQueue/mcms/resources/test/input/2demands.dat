@@ -1,0 +1,9 @@
+### Arrival Rate of Contacts ###
+# Lines that start with hash tag sign # are treated as comments. 
+# The data loader would ignore all comment lines including the header line. 
+# The data header: k, arrival
+# Row "k" defines the arrival rate of contacts of type k.
+#### HEADER AND DATA BELOW ###
+# k	arrival_rate
+0       1
+1	0.5

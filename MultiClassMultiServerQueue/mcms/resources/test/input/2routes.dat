@@ -1,0 +1,9 @@
+### Service Time ###
+# Lines that start with hash tag sign # are treated as comments. 
+# The data loader would ignore all comment lines including the header line. 
+# The data header:k, i, tau
+# Each row defines the time it takes for contact k to be served with agent i.
+#### HEADER AND DATA BELOW ###
+# k	i	service_time
+0	1	1.5
+1	0	4

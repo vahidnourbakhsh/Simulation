@@ -1,0 +1,8 @@
+### Number of Agents in Groups ###
+# Lines that start with hash tag sign # are treated as comments. 
+# The data loader would ignore all comment lines including the header line. 
+# The data header:i, num_agents
+#### HEADER AND DATA BELOW ###
+# i	num_agents
+0       3
+1	2

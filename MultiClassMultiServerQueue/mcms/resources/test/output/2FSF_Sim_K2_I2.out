@@ -1,0 +1,21 @@
+Example number: 2
+	 Number of contact types: 2
+ 	 Number of agent groups: 2
+ 	 Acceptable Waiting Time: 10.0
+
+Simulation setting: 
+ 	 Num Periods: 14
+ 	 Num Main Periods (excluding warm-up and wrap-up periods): 12
+ 	 Each Period's Length: 86400.0
+ 	 Num Replications: 10
+	 Total Net Simulation Duration (Num Main Periods * Each Period's Length * Num Replications): 86400.0
+
+Simulation results (average over replications): 
+	 Total number of contacts arrived at the system: 12947
+	 Total number of contacts served: 12946
+	 Total number of contacts served within the acceptable waiting time of 10.0: 12921
+	 Average number of contacts arrived at the system per unit time: 0.14985
+	 Average number of contacts served per unit time: 0.149838
+	 Average number of contacts served within the acceptable waiting time of 10.0 per unit time: 0.149838
+	 EW(avg): Expected queue waiting time of a random contact arrived at the system: 0.554066
+	 SL(avg): Average number of contacts that were served within the acceptable waiting time (defined per unit time): 0.149549
