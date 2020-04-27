@@ -1,6 +1,5 @@
-# Simulating the Fastest-Server-First routing policy 
-Simulation of the Fastest-Server-First (FSF), also known as Closest-Facility-First and Closest Driver routing policy for 
-the Multi-Class Multi-Server Queueing (MCMS) queueing systems:
+# Introduction
+This package simulates a routing/assignment dynamic policy known as Fastest-Server-First (FSF) or Closest-Facility-First and Closest Driver routing policy for the Multi-Class Multi-Server Queueing (MCMS) queueing systems.
 
 ## Applications of MCMS Queueing System
 Minimizing queue waiting time in MCMS systems, where the service time depends both on the job type and the server type, has wide applications in transportation systems such as emergency networks and taxi networks, service systems such as call centers, and distributed computing platforms. However, the optimal dynamic policy for this problem is not characterized. In the absence of an optimal dynamic routing policy, FSF policy is widely used in practice and queueing literature.
