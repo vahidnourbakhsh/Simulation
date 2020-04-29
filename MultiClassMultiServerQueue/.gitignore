@@ -1,1 +1,8 @@
-/bin/
+# Eclipse project files
+.settings/
+.classpath
+.project
+
+# Ant files
+build.xml
+
